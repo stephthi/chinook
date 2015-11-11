@@ -163,8 +163,12 @@ Track.where("Media_Type_id = 1").order("unit_price").limit(1)
 Artist.order("created_at DESC").limit(2)
 ```
 
+4.Find all the Tracks that belong to the first Playlist.
+# Enter your answer below
+Playlist.order("created_at ASC")[0].tracks.limit(1)
+```
 
-4. Find all the Tracks that belong to the 2 most recent Playlist.
+5. Find all the Tracks that belong to the 2 most recent Playlist.
 ```ruby
 # Enter your answer below
 Playlist.order("created_at DESC")[0].tracks
