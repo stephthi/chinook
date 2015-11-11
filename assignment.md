@@ -21,14 +21,12 @@ Check out [W3Schools' SQL Reference](http://www.w3schools.com/sql/sql_syntax.asp
 
 1. Count how many tracks belong to the MediaType "Protected MPEG-4 video file".
 ```SQL
-/* Add your answer below */
 SELECT COUNT(*) FROM tracks WHERE media_types_id = 3
 214
 ```
 
 2. Find the least expensive Track that has the Genre "Electronica/Dance".
 ```SQL
-/* Add your answer below */
 SELECT MIN(unit_price) FROM tracks WHERE genre_id = 15
 
  min
@@ -38,14 +36,12 @@ SELECT MIN(unit_price) FROM tracks WHERE genre_id = 15
 
 3. Find the all the Artists whose names start with A.
 ```SQL
-/* Add your answer below */
 SELECT * FROM artists WHERE name LIKE 'A%'
 26
 ```
 
 4. Find all the Tracks that belong to the first Playlist.
 ```SQL
-/* Add your answer below */
 SELECT * FROM playlists_tracks WHERE playlist_id = 1;
 ```
 
@@ -143,34 +139,29 @@ Of course, these can be done as one or more steps.
 
 1. Count how many tracks belong to the "Hip Hop/Rap" genre
 ```ruby
-# Enter your answer below
 35
 track = Track.all
 Track.where('Genre_id = 17').count
-
 ```
 
 2. Find the most expensive Track that has the MediaType "MPEG audio file".
 ```ruby
-# Enter your answer below
 MediaType.all
 Track.where("Media_Type_id = 1").order("unit_price").limit(1)
 ```
 
 3. Find the 2 oldest Artists.
 ```ruby
-# Enter your answer below
 Artist.order("created_at DESC").limit(2)
 ```
 
 4.Find all the Tracks that belong to the first Playlist.
-# Enter your answer below
+```ruby
 Playlist.order("created_at ASC")[0].tracks.limit(1)
 ```
 
 5. Find all the Tracks that belong to the 2 most recent Playlist.
 ```ruby
-# Enter your answer below
 Playlist.order("created_at DESC")[0].tracks
 Playlist.order("created_at DESC")[1].tracks
 ```
